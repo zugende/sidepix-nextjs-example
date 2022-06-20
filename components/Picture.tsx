@@ -3,7 +3,7 @@ import { makePicture } from 'sidepix/react';
 import { pictureConf } from './PictureConf';
 
 const pictureConfRef = {
-  filePath: resolve(__dirname, '../conf/PictureConf'),
+  filePath: resolve(__dirname, '../../../conf/PictureConf'),
   name: 'pictureConf',
 };
 
