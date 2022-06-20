@@ -6,13 +6,15 @@ import {
     formatToExtension,
     extensionToFormat,
   } from 'sidepix';
+
+import { resolve } from 'path';
   
   const fetch: FetchImage =
     typeof window === 'undefined'
       ? (src) => {
           const { createReadStream } = require('fs');
-          console.log(`../assets/${src}`);
-          return createReadStream(`../assets/${src}`);
+          console.log(resolve(__dirname, `../assets/${src}`));
+          return createReadStream(resolve(__dirname, `../assets/${src}`));
         }
       : () => {};
   
